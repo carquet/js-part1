@@ -62,7 +62,11 @@ var array_words = [];
 //
 /*COOMENTS FROM LAETITIA = we need to sort out the array from the bigest to the smallest and print all those words that are equal length of index0*/
 function findLongestWord( array_words ){
-	
+	array_words.sort(function(a, b){
+  	return b.length - a.length;
+});
+
+	}
 
 }
 
