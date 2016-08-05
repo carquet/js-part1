@@ -89,20 +89,21 @@ var array_lengths = [];
 array_lengths.push( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"]) );
 array_lengths.push( findLongestWord( ["Blanka", "Zangief", "Chun Li", "Guile"] ) );
 array_lengths.push( findLongestWord( ["Red", "Blue", "Green"] ) );
+
+
 //<place to add more lines>, read next commented text and you will understand
 
 console.log( "These are the longest lengths of each group: " + array_lengths );
+// console.log( calculateAverage(array_lengths));
 console.log( calculateAverage( array_lengths ) === 6 && "The average of longest lengths is: " + calculateAverage( array_lengths ))
-
-function calculateAverage( array )
-{  var sum = 0;
-	for ( var i in array){
-		 sum += i;
-		 i++;
+console.log(array_lengths);
+function calculateAverage( array ){
+  var sum = 0;
+	for (var i = 0; i < array.length; i++){
+		 sum += array[i];
 	}
-
-	return sum / (array.length - 1)
-	  
+	// console.log(sum/array.length)
+	return sum / array.length
 };
 
 // Now add more lengths to the array_lengths. You have to do it where <place to add more lines> is written. 
