@@ -61,7 +61,7 @@ console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 
 
 /*COMMENTS FROM LAETITIA = we need to sort out the array from the bigest to the smallest and print all those words that are equal length of index0*/
-function findLongestWord( array_words ){
+/*function findLongestWord( array_words ){
 
 	array_words.sort(function(a, b ){
   	return b.length - a.length;	
@@ -73,7 +73,7 @@ console.log( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"] ) 
 console.log( findLongestWord( ["Blanka", "Zangief", "Chun Li", "Guile"] ) === 7 );
 console.log( findLongestWord( ["Red", "Blue", "Green"] ) === 5 );
 
-
+/*
 
 //EXERCISE 4
 //
@@ -84,7 +84,7 @@ console.log( findLongestWord( ["Red", "Blue", "Green"] ) === 5 );
 // to return the average of every number in a array instead of the "Not implemented yet" message.
 
 
-
+/*
 var array_lengths = [];
 array_lengths.push( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"]) );
 array_lengths.push( findLongestWord( ["Blanka", "Zangief", "Chun Li", "Guile"] ) );
@@ -106,6 +106,7 @@ function calculateAverage( array ){
 	return sum / array.length
 };
 
+
 // Now add more lengths to the array_lengths. You have to do it where <place to add more lines> is written. 
 // You can use this structure: array_lengths.push( findLongestWord( [<add some elements>] ) );
 // Don't foget to add words to the array. The longer the better!
@@ -116,22 +117,39 @@ function calculateAverage( array ){
 
 //EXERCISE 5
 //
-// Restore the comments marks (/* */) of the previous exercises.
+// Restore the comments marks (/* */
 // Uncomment this exercise code deleting /* and */ chars
 // Now we are going to save the longest length of every array in a new array called array_lengths
 // Open the console and reload the index page to see the result of the code.
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. 
 // As a condition you must use the object freqCounter.
 // Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
+/* pseudo code LAETI : 
+1. Create an empty object.
+2. For each letter in the text 
+    2a. If the letter is not a property of the object then add it with value=1
+    2b. If the letter is already a property of the object increment the count
+3. Return the object containing the letters and their frequencies*/
 
-/*
 
-function charFreq( string ) {
-	freqCounter = {};
-
-	}
-	return freqCounter;
+function charFreq(string){
+ 	var freqCounter = {};
+ 	/*
+ 	lettersArray = string.split('')
+ 	for (var i = 0; i < lettersArray.length; i++){
+ 		if (freqCounter[letter]){
+ 			freqCounter[letter]++
+ 		} else {
+ 			freqCounter[letter] = 1
+ 		}*/
+ 	 string.split('').forEach(function(letter) {
+ 	 freqCounter[letter] ? freqCounter[letter]++ : freqCounter[letter] = 1;
+ });
+ return freqCounter;
 }
+
+
+
 
 counter = charFreq("abbabcbdbabdbdbabababcbcbab");
 console.log( counter['a'] === 7);
@@ -147,7 +165,7 @@ console.log( counter['s'] === 1 );
 console.log( counter.d === 1 );
 console.log( counter['f'] === 1 );
 
-*/
+
 
 
 //BONUS EXERCISE
