@@ -58,9 +58,11 @@ console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 // Open the console and reload the index page to see the result of the code.
 // Write a function that takes an array of words and returns the length of the longest one.
 
-/*
-
+var array_words = [];
+//
+/*COOMENTS FROM LAETITIA = we need to sort out the array from the bigest to the smallest and print all those words that are equal length of index0*/
 function findLongestWord( array_words ){
+	
 
 }
 
@@ -68,7 +70,7 @@ console.log( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"] ) 
 console.log( findLongestWord( ["Blanka", "Zangief", "Chun Li", "Guile"] ) === 7 );
 console.log( findLongestWord( ["Red", "Blue", "Green"] ) === 5 );
 
-*/
+
 
 //EXERCISE 4
 //
