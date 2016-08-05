@@ -62,16 +62,11 @@ console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 
 /*COMMENTS FROM LAETITIA = we need to sort out the array from the bigest to the smallest and print all those words that are equal length of index0*/
 function findLongestWord( array_words ){
-//	for (var i = 0 ; i < array_words.length; i++){
+
 	array_words.sort(function(a, b ){
   	return b.length - a.length;	
 });
-
- return array_words[0].length;
-
-//}
-
-	
+ return array_words[0].length;	
 }
 
 console.log( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"] ) ===6 );
@@ -88,7 +83,7 @@ console.log( findLongestWord( ["Red", "Blue", "Green"] ) === 5 );
 // You have to complete the calculateAverage function (it is a few lines below), and it has
 // to return the average of every number in a array instead of the "Not implemented yet" message.
 
-/*
+
 
 var array_lengths = [];
 array_lengths.push( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"]) );
@@ -100,16 +95,22 @@ console.log( "These are the longest lengths of each group: " + array_lengths );
 console.log( calculateAverage( array_lengths ) === 6 && "The average of longest lengths is: " + calculateAverage( array_lengths ))
 
 function calculateAverage( array )
-{
-	return( "Not implemented yet" )
-}
+{  var sum = 0;
+	for ( var i in array){
+		 sum += i;
+		 i++;
+	}
+
+	return sum / (array.length - 1)
+	  
+};
 
 // Now add more lengths to the array_lengths. You have to do it where <place to add more lines> is written. 
 // You can use this structure: array_lengths.push( findLongestWord( [<add some elements>] ) );
 // Don't foget to add words to the array. The longer the better!
 // Now reload the page and see how changed the average.
 
-*/
+
 
 
 //EXERCISE 5
