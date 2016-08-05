@@ -58,16 +58,20 @@ console.log( dniLetter( "A1234567" ) === 'Invalid parameter');
 // Open the console and reload the index page to see the result of the code.
 // Write a function that takes an array of words and returns the length of the longest one.
 
-var array_words = [];
-//
-/*COOMENTS FROM LAETITIA = we need to sort out the array from the bigest to the smallest and print all those words that are equal length of index0*/
+
+
+/*COMMENTS FROM LAETITIA = we need to sort out the array from the bigest to the smallest and print all those words that are equal length of index0*/
 function findLongestWord( array_words ){
-	array_words.sort(function(a, b){
-  	return b.length - a.length;
+//	for (var i = 0 ; i < array_words.length; i++){
+	array_words.sort(function(a, b ){
+  	return b.length - a.length;	
 });
 
-	}
+ return array_words[0].length;
 
+//}
+
+	
 }
 
 console.log( findLongestWord( ["Richie", "Joanie", "Greg", "Marcia", "Bobby"] ) ===6 );
@@ -78,7 +82,7 @@ console.log( findLongestWord( ["Red", "Blue", "Green"] ) === 5 );
 
 //EXERCISE 4
 //
-// Uncomment the exercise code deleting /* and */ chars
+// Uncomment the exercise code deleting /* and chars */ 
 // Now we are going to save the longest length of every array in a new array called array_lengths
 // Open the console and reload the index page to see the result of the code.
 // You have to complete the calculateAverage function (it is a few lines below), and it has
